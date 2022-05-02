@@ -1,1 +1,1 @@
-# leetcode
+# Coding Challenge Solutions
