@@ -11,22 +11,21 @@
 # "ABBA" -> 2 # 'A' and 'B' each occur twice
 
 def duplicate_count(text):
-    
-    d={}
-    text=text.lower()
-    count=0
-    
-    lst=list(set(list(text)))
-    
-    
+
+    d = {}
+    text = text.lower()
+    count = 0
+
+    lst = list(set(list(text)))
+
     print(set(list(text)))
-    
+
     for i in range(len(lst)):
-        d[lst[i]]=text.count(lst[i])
-    for k,v in d.items():
-        if v>=2:
-            count+=1
-            
+        d[lst[i]] = text.count(lst[i])
+    for k, v in d.items():
+        if v >= 2:
+            count += 1
+
     return count
 
 
