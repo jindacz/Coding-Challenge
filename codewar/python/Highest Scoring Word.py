@@ -11,6 +11,6 @@
 def high(x):
     # use key parameter to personalize max function
     # ord(i) returns unicode of character
-    # ord returns the ASCII code for the character. 
-    #'a' is 97 in ASCII so subtracting 96 will get the actual position in the alphabet.
-    return max(x.split(),key=lambda r: sum(ord(i)-96 for i in r))
+    # ord returns the ASCII code for the character.
+    # 'a' is 97 in ASCII so subtracting 96 will get the actual position in the alphabet.
+    return max(x.split(), key=lambda r: sum(ord(i)-96 for i in r))
