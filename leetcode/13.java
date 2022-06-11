@@ -32,3 +32,6 @@ public static main(String[] args){
     int result = romanToInt("III")
     assertEquals(3, result)
 }
+
+// input length is guarenteed to 9, o(n) -> o(1)
+// space is o(1), initilize the hash map to 7, o(7) -> o(1)
