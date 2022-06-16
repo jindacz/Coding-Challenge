@@ -17,7 +17,7 @@ Therefore only 12 and 7896 contain an even number of digits.*/
 class Solution {
     public int findNumbers(int[] nums) {
         int evencount=0;
-        for(int num:nums){
+        for(int num : nums){
             int digitsCount=0;
             while(num>0){
                 num=num/10;

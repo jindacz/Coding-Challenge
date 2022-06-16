@@ -92,7 +92,7 @@ public class Solution {
 
 public class Solution {
     public boolean hasCycle(ListNode head) {
-        if(head==null||head.next==null){ //boundary conditions
+        if(head==null || head.next==null){ //boundary conditions
         	return false;
         }
         ListNode slow=head;
