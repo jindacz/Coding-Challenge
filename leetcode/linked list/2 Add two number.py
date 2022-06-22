@@ -13,7 +13,7 @@ def addTwoNumbers(self, l1, l2):
         p = l1
         q = l2
         carry = 0
-        
+   
         while p or q:
             x = 0 if not p else p.val 
             y = 0 if not q else q.val
