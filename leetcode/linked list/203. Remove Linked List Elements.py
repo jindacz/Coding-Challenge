@@ -5,32 +5,19 @@
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
-class Solution(object):
-    def removeElements(self, head, val):
-        """
-        :type head: ListNode
-        :type val: int
-        :rtype: ListNode
-        E:
-        P: 
-        1. iterative through the ll and keep track of value != val in []
-        2. loop throught again and replace the ll val with the value in []
-        3. return new head
-        """
-        res = [] 
-        newHead = head # keep track of newHead
-        newLL = head #ptr to loop through new List
-        
-        while head != None:
-            if head.val != val: 
-                res.append(head.val) # add to result array
-            head = head.next
-        
-        for i in range(len(res)):
-            newLL.val = res[i] # replace the old ll with new value in result array
-            if i != len(res) - 1: # if not hit the end of ll
-                newLL = newLL.next # move the loop ptr one step later
-            else:
-                newLL.next = None
-        return newHead if len(res) != 0 else None
-        
+
+def removeElements(head, val):
+    # 1. Create a “dummy” head to point to head (to ensure we always have a valid return node)
+    dummy = ListNode(None)     
+    dummy.next = head
+    
+    # 2. Create a new pointer curr pointing to “dummy” head
+    curr = dummy
+
+    while curr.next:
+        if curr.next.val == val:
+            # skip/remove the node
+            curr.next = curr.next.next
+        else:
+            curr = curr.next
+    return dummy.next
