@@ -47,12 +47,12 @@ class Solution:
     		return head
 
     	else:
-    		right=right.next #right先行
-    		left.next=None #原来的第一个变成现在的最后一个
+    		right = right.next #right先行
+    		left.next = None #原来的第一个变成现在的最后一个
 
-    	while right!=None: #开始循环
-    		head=right #head第二个行动
-    		right=right.next #right再往右一步
-    		head.next=left #箭头转向
-    		left=head #left往右边
+    	while right != None: #开始循环
+    		head = right #head第二个行动
+    		right = right.next #right再往右一步
+    		head.next = left #箭头转向
+    		left = head #left往右边
     	return head
