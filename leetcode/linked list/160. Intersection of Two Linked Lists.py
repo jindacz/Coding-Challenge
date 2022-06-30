@@ -9,7 +9,7 @@
 
 
 # P: can two linkedlist be none?
-# are node value all positive integers?
+# are node value all positive integers? determine by value or by address?
 
 # R: Can you please explain what do you want intersection? 
 # first intersection node? 
@@ -20,6 +20,8 @@
 # 如果指针 pA 不为空，则将指针 pA 移到下一个节点；如果指针 pB 不为空，则将指针 pB 移到下一个节点。
 # 如果指针 pA 为空，则将指针 pA 移到链表 headB 的头节点；如果指针 pB 为空，则将指针 pB 移到链表 headA 的头节点。
 # 当指针 pA 和 pB 指向同一个节点或者都为空时，返回它们指向的节点或者 null。
+
+
 
 class Solution(object):
     def getIntersectionNode(self, headA, headB):

@@ -17,13 +17,14 @@ class Solution(object):
         temp = dummy
 
         while temp.next and temp.next.next: # [du, 1, 2, 3] -> [du, 2, 1, 3]
-            node1 = temp.next # init/update mid ptr
+            first = temp.next # init/update mid ptr
             node2 = temp.next.next # init/update right ptr
             
             temp.next = node2 # du -> 2
             node1.next = node2.next # 1 -> 3
             node2.next = node1  # 2 -> 1
-            temp = node1 # temp -> 3
+
+            temp = node1 # update p to next iteration, temp to 1
         return dummy.next
 
 
