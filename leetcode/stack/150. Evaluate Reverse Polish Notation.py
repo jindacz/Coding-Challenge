@@ -15,17 +15,15 @@
 # Explanation: ((2 + 1) * 3) = 9
 
 
-def evalRPN(tokens):
-    """
-    :type tokens: List[str]
-    :rtype: int
-    """
+def evalRPN(self, s):
+    if not s: return 0
+
     stack = []
-    for i in tokens: 
+    for i in s: 
         # if not stack: return None
-        print(i)
+        # print(i)
         if i not in "+-*/":
-            stack.append(int(i))
+            stack.append(float(i))
         else:     
             num2, num1 = stack.pop(), stack.pop()
             if i == "+":
@@ -35,10 +33,28 @@ def evalRPN(tokens):
             elif i == "*":
                 stack.append(num1 * num2)
             else:
-                stack.append(int(num1 / num2))
-        
-    return stack[-1]
+                stack.append(int(num1 /  num2))
+
+    return int(stack[-1])
 
 # print(evalRPN(["2","1","+","3","*"]))
 # print(evalRPN(["4","13","5","/","+"]))
 print(evalRPN(["10","6","9","3","+","-11","*","/","*","17","+","5","+"]))
+
+s1 = "3 4 +"
+print("Test Case 1", PostFixEval(s1)== 7)
+
+s2 = "5 1 2 + 4 * + 3 -"
+print("Test Case 2", PostFixEval(s2)== 14)
+
+s3 = "2 1 + 3 *"
+print("Test Case 3", PostFixEval(s3)== 9)
+
+s4 = "4 13 5 / +"
+print("Test Case 4", PostFixEval(s4)== 6)
+
+s5 = "2"
+print("Test Case 5", PostFixEval(s5)== 2)
+
+s6 = " "
+print("Test Case 6", PostFixEval(s6)== 0)
