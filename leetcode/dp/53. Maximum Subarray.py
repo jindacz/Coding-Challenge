@@ -18,6 +18,8 @@
 
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
+        if not arr: 
+            return 0
         subCount = 0
         maxCount = nums[0]  # 先假设最大子序和就是列表第一个元素
 
