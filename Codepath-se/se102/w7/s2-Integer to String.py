@@ -17,7 +17,7 @@ def i_to_s(n):
 
   return ''.join(l)
   
-
+# test with smallest possible first
 def main():
   tests = [
     { 'input': 1,    'output': '1' },
